@@ -7,7 +7,6 @@ html, body {
 
 html {
   font-size: 10px;
-
 }
 
 body {
@@ -20,7 +19,7 @@ body {
 /* || typography */
 
 h1, h2, h3 {
-  font-family: 'Cinzel Decorative', cursive;
+  font-family: 'Frijole', cursive;
   color: #2a2a2a;
 }
 
@@ -48,6 +47,7 @@ h3 {
 
 p, li {
   font-size: 1.6rem;
+
   line-height: 1.5;
 }
 
@@ -60,7 +60,7 @@ p, li {
 }
 
 body > * {
-  background-color: red;
+  background-color: rgba(0,255,0,0.5);
   padding: 1%;
 }
 
@@ -74,13 +74,14 @@ h1 {
   text-transform: uppercase;
 }
 
-header img {
+.header img {
   display: block;
   height: 60px;
   padding-top: 20.15px;
 }
 
 nav {
+  font-weight: 900;
   height: 50px;
   flex: 100%;
   display: flex;
@@ -117,6 +118,7 @@ nav a, nav span {
 }
 
 .article, .section {
+  font-weight: 700;
   flex: 4;
 }
 
