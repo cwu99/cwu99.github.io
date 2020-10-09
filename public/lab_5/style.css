@@ -1,0 +1,51 @@
+body {
+  background: lightskyblue;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  color:white;
+}
+
+.container{
+  min-width: 160px;
+  width: 100%;
+  margin: 20px auto;
+  align-self: center;
+}
+
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+}
+
+.flex-inner{
+  justify-content: space-between;
+}
+
+.flex-outer > li > input,
+.flex-outer > li > textarea {
+  display: flex;
+  flex: 1;
+  max-width: 800px;
+}
+
+.flex-outer li button {
+  padding: 8px 30px;
+  border: none;
+  background: white;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  margin-right: 10px;
+}
+
+label, p {
+  width: 250px;
+  font-size: 20px;
+  font-weight: bold;
+}
