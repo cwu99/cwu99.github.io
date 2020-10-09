@@ -15,6 +15,11 @@ h1 {
   align-self: center;
 }
 
+.flex-outer{
+  max-width: 800px;
+  padding: 0px 16px;
+}
+
 .flex-outer li,
 .flex-inner {
   display: flex;
@@ -27,21 +32,31 @@ h1 {
   justify-content: space-between;
 }
 
-.flex-outer > li > input,
-.flex-outer > li > textarea {
-  display: flex;
-  flex: 1;
-  max-width: 800px;
+.flex-outer > li > label,
+.flex-outer li p{
+  flex: 1 0 125px;
+  max-width: 225px;
+  padding: 8px;
+}
+
+.flex-outer > li > label + *,
+.flex-inner{
+  flex: 1 0 225px;
 }
 
 .flex-outer li button {
-  padding: 8px 30px;
+  padding: 6px 12px;
   border: none;
   background: white;
   color: black;
   text-transform: uppercase;
   letter-spacing: .09em;
   margin-right: 10px;
+  border-radius: 3px;
+}
+
+.flex-inner li{
+  width: 100px;
 }
 
 label, p {

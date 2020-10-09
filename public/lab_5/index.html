@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Chuan Wu's Lab 4</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Chuan Wu's Lab 5</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1>Chuan Wu's Lab 4</h1>
+    <h1>Chuan Wu's Lab 5</h1>
     <div class="container">
         <form action="/api" method="post">
             <ul class="flex-outer">
@@ -28,7 +28,7 @@
                 </li>
                 <li>
                     <label for="message">Text field</label>
-                    <textarea rows="5" cols="33" id="message" placeholder="Click and write your message here!"></textarea>
+                    <textarea rows="5" cols="33" id="message" name="message" placeholder="Click and write your message here!"></textarea>
                 </li>
                 <li>
                     <p class="checkbox-list-label">Age</p>   
@@ -48,8 +48,8 @@
                     </ul>
                 </li>
                 <li>
-                    <button type="submit">SUBMIT FORM</button>
-                    <button type="button" name="activate" onclick="testFunction()">Activate</button>
+                    <button type="submit" name="submit" id="sumbit form">SUBMIT FORM</button>
+                    <button type="button" name="activate" id="activate" onclick="testFunction()">Activate</button>
                 </li>
             </ul>
         </form> 
