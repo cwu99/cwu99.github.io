@@ -1,19 +1,34 @@
 function convertRestaurantsToCategories(restaurantList) {
   // process your restaurants here!
-  return list;
+  const result = restaurantList.reduce((a, b) => {
+  const findCat = a.find((findItem) => findItem.label === b.category);
+    console.log(b.category);
+    
+    if (!findCat) {
+      a.push({
+        label: b.category,
+        y: 1
+      });
+    } else {
+      findCat.y += 1;
+    }
+    return a;
+  }, []);
+  return result;  
 }
 
 function makeYourOptionsObject(datapointsFromRestaurantsList) {
   // set your chart configuration here!
   CanvasJS.addColorSet('customColorSet1', [
     // add an array of colors here https://canvasjs.com/docs/charts/chart-options/colorset/
+    "#4661EE", "#EC5657", "#1BCDD1", "#8FAABB", "#B08BEB", "#3EA0DD", "#F5A52A", "#23BFAA", "#FAA586", "#EB8CC6"
   ]);
 
   return {
     animationEnabled: true,
     colorSet: 'customColorSet1',
     title: {
-      text: 'Change This Title'
+      text: 'PLACES TO EAT OUT IN FUTURE'
     },
     axisX: {
       interval: 1,
@@ -22,9 +37,13 @@ function makeYourOptionsObject(datapointsFromRestaurantsList) {
     axisY2: {
       interlacedColor: 'rgba(1,77,101,.2)',
       gridColor: 'rgba(1,77,101,.1)',
-      title: 'Change This Title',
+      title: 'RESTAURANTS BY CATEGORY',
       labelFontSize: 12,
-      scaleBreaks: {customBreaks: []} // Add your scale breaks here https://canvasjs.com/docs/charts/chart-options/axisy/scale-breaks/custom-breaks/
+      scaleBreaks: {customBreaks: [
+        {startValue: 40, endValue: 50, color: orange}, 
+        {startValue: 85, endValue: 100, color: green}, 
+        {startValue: 140, endValue: 175, color: red}
+      ]} // Add your scale breaks here https://canvasjs.com/docs/charts/chart-options/axisy/scale-breaks/custom-breaks/
     },
     data: [{
       type: 'bar',
